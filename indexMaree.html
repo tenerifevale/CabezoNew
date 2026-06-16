@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="immagini/surfer.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="immagini/surfer.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maree</title>
+    <style>
+        .container {
+            display: flex;
+            /* disposizione in riga */
+            justify-content: left;
+            /* centrati orizzontalmente */
+            gap: 10px;
+            /* spazio tra i quadrati */
+            margin-bottom: 10px;
+        }
+
+        .quadratoVen {
+            width: 200px;
+            height: 20px;
+            border-radius: 20px;
+            /* angoli smussati */
+            border: 2px solid #000;
+            background-color: green;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-family: 'Courier New';
+            color: #030303;
+            text-align: left;
+            margin: 0;
+            padding: 30;
+            font-size: 1.2rem;
+        }
+
+        h2 {
+            font-family: 'Courier New';
+            color: #030303;
+            text-align: center;
+            margin: 0;
+            padding: 30;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            color: #020202;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" style="margin-top: 10px; margin-left: 50px;">
+        <input type="date" id="data_nuova" name="data" required style="color: black; font-size: 20px;">
+        <div id="btnInvia" class="quadratoVen"> Carica Maree</div>
+    </div>
+    </div>
+    <div
+        style="padding-top: 10px; border: 1px solid black; background: linear-gradient(to bottom right, #f9fafb, #b7f1f4);">
+        <h2>Mareas</h2>
+        <!-- Canvas per il grafico -->
+        <canvas id="graficoMaree_nuova" width="400" height="200"></canvas>
+        <!-- Libreria Chart.js -->
+
+        <div style="padding-left: 20px;   border: 1px solid black;">
+            <h1 id="oldMarea">Old Marea</h1>
+            <h1 id="oraMarea">Ora Marea</h1>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="funzioniMaree.js"></script>
+
+    <footer>
+        &copy; by Valentino
+    </footer>
+</body>
+
+</html>
